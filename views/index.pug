@@ -1,5 +1,29 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  #intro
+    h1 10th Achiever
+    p I believe you can achieve in 1/10th the time it normally takes
+    button#retrieve-last-tasks Retrieve
+    button#save-tasks Save
+    button#new-list New
+    button#schedule-tasks Schedule
+  #app
+    vue-tabs
+      v-tab(title='Tasks')
+        #list-area
+      v-tab(title='Schedule')
+        #schedule-area
+      v-tab(title='Bulk schedule')
+        #bulker
+          button#bulk-lister Bulk Schedule
+          textarea#bulk-list(onkeyup='textAreaAdjust(this)')
+      v-tab(title='Past Schedules')
+        p Third tab content
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.js')
+  script(src='https://rawgit.com/cristijora/vue-tabs/master/dist/vue-tabs.js')
+  script(src='https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js')
+  script(src='./javascripts/tools/Schedule.js')
+  script(src='./javascripts/tools/minimizeCore.js')
+  script(src='./javascripts/bulkScheduler.js')
+  script(src='./javascripts/main.js')

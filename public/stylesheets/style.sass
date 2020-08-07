@@ -4,3 +4,34 @@ body
 
 a
   color: #00B7FF
+
+.task 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  margin: 13px;
+  border: #ddd solid 1px;
+  background: #eee;
+  box-sizing: content-box;
+  height: 50px;
+  border-radius: 5px;
+  transition: all 0.05s ease-in-out;
+  
+  & > p 
+    display: inline;
+    margin: 10px 5px;
+  
+  & > .duration 
+    width: 35px;
+  
+  &:focus-within 
+    background: #fff;
+    box-shadow: 5px 2px 2px black;
+
+#bulker
+  display: flex;
+  flex-direction: column;
+
+#intro, #schedule-area, #list-area 
+  margin: 30px;
